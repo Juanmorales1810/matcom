@@ -1,146 +1,562 @@
 ---
-import { ArrowRight, Code2, Rocket } from 'lucide-react';
-import { Button } from '../ui/button';
+
 ---
 
-<section class="overflow-hidden py-32">
-    <div class="relative container mx-auto px-4">
-        <div class="mb-6 text-center">
-            <span
-                class="bg-primary/10 text-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium">
-                <Code2 className="h-4 w-4" />
-                Plantilla Astro - Devanthos
-            </span>
+<section class="hero-bp relative m-4 min-h-dvh overflow-hidden rounded-3xl">
+    <!-- Cuadrícula de plano arquitectónico -->
+    <div class="bp-grid absolute inset-0" aria-hidden="true"></div>
+
+    <!-- Decoraciones técnicas del plano -->
+    <div class="pointer-events-none absolute inset-0 z-10" aria-hidden="true">
+        <!-- Marcas de esquina (crucetas de registro) -->
+        <div class="crux crux-tl"></div>
+        <div class="crux crux-tr"></div>
+        <div class="crux crux-bl"></div>
+        <div class="crux crux-br"></div>
+
+        <!-- Líneas de cotas horizontales -->
+        <div class="cota-h" style="top: 14%"></div>
+        <div class="cota-h" style="bottom: 16%"></div>
+
+        <!-- Líneas de cotas verticales -->
+        <div class="cota-v" style="left: 6%"></div>
+        <div class="cota-v" style="right: 6%"></div>
+
+        <!-- Círculos de referencia (notación de planos) -->
+        <div class="ref-circle" style="top: 26%; left: 9%">A1</div>
+        <div class="ref-circle" style="top: 26%; right: 9%">A2</div>
+        <div class="ref-circle" style="bottom: 24%; left: 9%">B1</div>
+        <div class="ref-circle" style="bottom: 24%; right: 9%">B2</div>
+
+        <!-- Rosa de los vientos -->
+        <div class="compass-wrap" style="bottom: 2.5rem; right: 2.5rem">
+            <svg
+                width="52"
+                height="52"
+                viewBox="0 0 52 52"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle
+                    cx="26"
+                    cy="26"
+                    r="24"
+                    stroke="white"
+                    stroke-width="0.6"
+                    stroke-opacity="0.55"></circle>
+                <circle
+                    cx="26"
+                    cy="26"
+                    r="19"
+                    stroke="white"
+                    stroke-width="0.4"
+                    stroke-opacity="0.3"
+                    stroke-dasharray="3 4"></circle>
+                <!-- Norte (sólido) -->
+                <polygon points="26,4 29.5,26 26,23 22.5,26" fill="white" fill-opacity="0.95"
+                ></polygon>
+                <!-- Sur -->
+                <polygon points="26,48 22.5,26 26,29 29.5,26" fill="white" fill-opacity="0.25"
+                ></polygon>
+                <!-- Este -->
+                <polygon points="48,26 26,29.5 29,26 26,22.5" fill="white" fill-opacity="0.25"
+                ></polygon>
+                <!-- Oeste -->
+                <polygon points="4,26 26,22.5 23,26 26,29.5" fill="white" fill-opacity="0.25"
+                ></polygon>
+                <text
+                    x="26"
+                    y="14"
+                    text-anchor="middle"
+                    fill="white"
+                    fill-opacity="0.85"
+                    font-size="5.5"
+                    font-family="monospace"
+                    font-weight="bold">N</text
+                >
+                <circle cx="26" cy="26" r="2.5" fill="white" fill-opacity="0.5"></circle>
+            </svg>
         </div>
-        <h1
-            class="from-primary/60 via-primary to-primary/60 mx-auto max-w-4xl bg-gradient-to-r bg-clip-text text-center text-4xl font-semibold text-transparent lg:text-6xl">
-            Plantilla Astro <br /> Lista para usar
-        </h1>
-        <p class="text-muted-foreground mx-auto mt-4 max-w-2xl text-center text-lg lg:mt-10">
-            Plantilla moderna de Astro con Tailwind CSS y componentes UI. Integra nuevas secciones
-            directamente en el archivo <code class="bg-muted rounded px-2 py-1 text-sm"
-                >src/pages/index.astro</code
-            >
+
+        <!-- Carátula técnica (esquina inferior izquierda) -->
+        <div class="caratula" style="bottom: 2.5rem; left: 2.5rem">
+            <div class="car-header">PLANO: MAT-H-001</div>
+            <div class="car-row"><span>CLIENTE</span><span>MATCOM S.A.</span></div>
+            <div class="car-row"><span>ESCALA</span><span>1:100</span></div>
+            <div class="car-row"><span>REV.</span><span>04</span></div>
+        </div>
+
+        <!-- Indicadores de sección central (líneas punteadas decorativas) -->
+        <div class="section-indicator" style="top: 48%; left: 5%">
+            <span>— — —</span>
+            <span class="si-label">SECCIÓN A-A'</span>
+        </div>
+        <div class="section-indicator right-side" style="top: 48%; right: 5%">
+            <span class="si-label">SECCIÓN B-B'</span>
+            <span>— — —</span>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div
+        class="relative z-20 flex min-h-dvh flex-col items-center justify-center gap-10 px-6 text-center">
+        <!-- Etiqueta de clasificación -->
+        <div class="clasif-badge">
+            <span class="cb-line"></span>
+            <span class="text-sm">◆ EMPRESA CONSTRUCTORA ◆</span>
+            <span class="cb-line"></span>
+        </div>
+
+        <!-- Título isométrico principal -->
+        <div class="iso-wrap">
+            <h1 class="iso-title pt-4 pb-8">MATCOM</h1>
+            <!-- Líneas de cota superior/inferior del título -->
+            <div class="title-cota title-cota-top"></div>
+            <div class="title-cota title-cota-bot"></div>
+        </div>
+
+        <!-- Regla decorativa con eslogan -->
+        <div class="eslogan-row">
+            <span class="esl-tick"></span>
+            <span class="esl-text text-sm">CONSTRUYENDO EL FUTURO CON PRECISIÓN</span>
+            <span class="esl-tick"></span>
+        </div>
+
+        <!-- Descripción -->
+        <p class="desc-text text-base">
+            Soluciones constructivas de alto desempeño.<br />
+            Innovación, calidad y excelencia en cada proyecto.
         </p>
-        <div
-            class="relative z-10 mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:mt-16">
-            <Button size="lg" className="min-w-[200px]">
-                <Rocket className="mr-2 h-4 w-4" />
-                Comenzar
-                <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button variant="outline" size="lg" className="min-w-[200px]">
-                Ver Documentación
-            </Button>
+
+        <!-- Botones de acción -->
+        <div class="cta-row">
+            <a href="#proyectos" class="btn-filled">▶&nbsp; VER PROYECTOS</a>
+            <a href="#contacto" class="btn-ghost">CONTACTAR</a>
         </div>
-        <div class="inset-0 -z-10 flex justify-center lg:absolute">
-            <div class="relative -top-8 flex justify-between sm:-top-20 lg:-top-0 lg:w-full">
-                <div
-                    class="relative -left-20 min-h-44 min-w-[460px] translate-x-28 scale-80 sm:translate-x-0 lg:min-h-[292px] lg:scale-90 xl:scale-100">
-                    <span
-                        class="border-border absolute right-0 -bottom-5 flex size-20 scale-60 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-3.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                    <span
-                        class="border-border absolute right-24 bottom-1 flex size-20 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-20.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                    <span
-                        class="border-border absolute right-44 bottom-7 flex size-20 scale-60 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-6.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                    <span
-                        class="border-border absolute right-44 bottom-28 flex size-20 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-8.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                    <span
-                        class="border-border absolute bottom-4 left-24 flex size-20 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-9.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                    <span
-                        class="border-border absolute bottom-24 left-20 flex size-20 scale-60 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-21.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                </div>
-                <div
-                    class="relative -right-20 min-h-44 min-w-[460px] -translate-x-28 scale-80 sm:translate-x-0 lg:min-h-[292px] lg:scale-90 xl:scale-100">
-                    <span
-                        class="border-border absolute -bottom-5 left-0 flex size-20 scale-60 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-12.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                    <span
-                        class="border-border absolute bottom-1 left-24 flex size-20 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-13.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                    <span
-                        class="border-border absolute bottom-7 left-44 flex size-20 scale-60 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-14.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                    <span
-                        class="border-border absolute bottom-28 left-44 flex size-20 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-15.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                    <span
-                        class="border-border absolute right-24 bottom-4 flex size-20 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-17.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                    <span
-                        class="border-border absolute right-20 bottom-24 flex size-20 scale-60 items-center justify-center rounded-full border p-4">
-                        <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/integration/integration-19.svg"
-                            alt="logo"
-                            class="brightness-0 invert-0 dark:invert"
-                        />
-                    </span>
-                </div>
-                <div
-                    class="from-background/80 to-background/80 absolute inset-0 bg-gradient-to-r via-transparent">
-                </div>
+
+        <!-- Estadísticas -->
+        <div class="stats-row">
+            <div class="stat">
+                <span class="stat-n">+500</span>
+                <span class="stat-l">PROYECTOS</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat">
+                <span class="stat-n">15</span>
+                <span class="stat-l">AÑOS EXP.</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat">
+                <span class="stat-n">ISO</span>
+                <span class="stat-l">CERTIFICADO</span>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Share+Tech+Mono&display=swap');
+
+    /* ─── Base ─────────────────────────────────────────── */
+    .hero-bp {
+        background-color: #0c5ab4;
+        color: #fff;
+        font-family: 'Share Tech Mono', monospace;
+    }
+
+    /* ─── Cuadrícula de plano ───────────────────────────── */
+    .bp-grid {
+        background-image:
+            /* líneas principales cada 100 px */
+            linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+            /* subdivisiones cada 20 px */
+            linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+        background-size:
+            100px 100px,
+            100px 100px,
+            20px 20px,
+            20px 20px;
+    }
+
+    /* ─── Crucetas de registro ──────────────────────────── */
+    .crux {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+    }
+    .crux::before,
+    .crux::after {
+        content: '';
+        position: absolute;
+        background: rgba(255, 255, 255, 0.65);
+    }
+    /* brazo horizontal */
+    .crux::before {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        transform: translateY(-50%);
+    }
+    /* brazo vertical */
+    .crux::after {
+        left: 50%;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        transform: translateX(-50%);
+    }
+
+    .crux-tl {
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+    .crux-tr {
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    .crux-bl {
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+    .crux-br {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    /* ─── Líneas de cotas ───────────────────────────────── */
+    .cota-h {
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        height: 1px;
+        background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.28) 8%,
+            rgba(255, 255, 255, 0.28) 92%,
+            transparent 100%
+        );
+    }
+    .cota-h::before,
+    .cota-h::after {
+        content: '◄';
+        position: absolute;
+        top: -7px;
+        font-size: 8px;
+        color: rgba(255, 255, 255, 0.38);
+    }
+    .cota-h::before {
+        left: 7%;
+    }
+    .cota-h::after {
+        right: 7%;
+        transform: scaleX(-1);
+    }
+
+    .cota-v {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        width: 1px;
+        background: linear-gradient(
+            transparent 0%,
+            rgba(255, 255, 255, 0.28) 8%,
+            rgba(255, 255, 255, 0.28) 92%,
+            transparent 100%
+        );
+    }
+
+    /* ─── Círculos de referencia ────────────────────────── */
+    .ref-circle {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border: 1.5px solid rgba(255, 255, 255, 0.45);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 9px;
+        color: rgba(255, 255, 255, 0.55);
+        transform: translate(-50%, -50%);
+        letter-spacing: 0;
+    }
+
+    /* ─── Carátula técnica ──────────────────────────────── */
+    .caratula {
+        position: absolute;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 8.5px;
+        color: rgba(255, 255, 255, 0.58);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        min-width: 130px;
+    }
+    .car-header {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 4px 8px;
+        font-size: 8px;
+        letter-spacing: 0.14em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+        text-align: center;
+    }
+    .car-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 3px 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .car-row:last-child {
+        border-bottom: none;
+    }
+
+    /* ─── Indicadores de sección ────────────────────────── */
+    .section-indicator {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 8px;
+        letter-spacing: 0.15em;
+        color: rgba(255, 255, 255, 0.3);
+        transform: translateY(-50%);
+    }
+    .section-indicator.right-side {
+        flex-direction: row-reverse;
+    }
+    .si-label {
+        white-space: nowrap;
+    }
+
+    /* ─── Etiqueta de clasificación ─────────────────────── */
+    .clasif-badge {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.62rem;
+        letter-spacing: 0.32em;
+        color: rgba(255, 255, 255, 0.6);
+        animation: bpFadeDown 0.7s ease both;
+    }
+    .cb-line {
+        display: block;
+        width: 40px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.35);
+    }
+
+    /* ─── Envoltorio del título ──────────────────────────── */
+    .iso-wrap {
+        position: relative;
+        display: inline-block;
+        animation: bpFadeUp 0.9s ease 0.2s both;
+    }
+    .title-cota {
+        position: absolute;
+        left: -10px;
+        right: -20px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.22);
+    }
+    .title-cota::before,
+    .title-cota::after {
+        content: '';
+        position: absolute;
+        top: -3px;
+        width: 1px;
+        height: 7px;
+        background: rgba(255, 255, 255, 0.35);
+    }
+    .title-cota::before {
+        left: 0;
+    }
+    .title-cota::after {
+        right: 0;
+    }
+    .title-cota-top {
+        top: -8px;
+    }
+    .title-cota-bot {
+        bottom: -8px;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       TÍTULO ISOMÉTRICO — pieza central del diseño
+       Técnica: múltiples capas de text-shadow en diagonal
+       45° (paso 1px X / 1px Y) → efecto de bloque 3D
+       que remite a las letras isométricas de los planos.
+       ══════════════════════════════════════════════════════ */
+    .iso-title {
+        font-family: 'Anton', 'Impact', sans-serif;
+        font-size: clamp(68px, 15vw, 172px);
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        line-height: 0.88;
+        color: #ffffff;
+
+        /* Borde luminoso superior-izquierdo (arista del bloque) */
+        text-shadow:
+            -1px -1px 0 rgba(255, 255, 255, 0.45),
+            /* Capas de profundidad isométrica — dirección 45° */ 2px 2px 0 #0a50a0,
+            4px 4px 0 #0a50a0,
+            6px 6px 0 #094798,
+            8px 8px 0 #093d90,
+            10px 10px 0 #093d90,
+            12px 12px 0 #083388,
+            14px 14px 0 #083388,
+            16px 16px 0 #072980,
+            18px 18px 0 #072980,
+            20px 20px 0 #061f78,
+            22px 22px 0 #061f78,
+            24px 24px 0 #051570,
+            26px 26px 0 rgba(0, 0, 0, 0.45),
+            28px 28px 6px rgba(0, 0, 0, 0.18);
+    }
+
+    /* ─── Eslogan con separadores ───────────────────────── */
+    .eslogan-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.6rem;
+        letter-spacing: 0.28em;
+        color: rgba(255, 255, 255, 0.5);
+        animation: bpFade 0.8s ease 0.4s both;
+    }
+    .esl-tick {
+        display: block;
+        width: 30px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.3);
+    }
+    .esl-text {
+        white-space: nowrap;
+    }
+
+    /* ─── Descripción ───────────────────────────────────── */
+    .desc-text {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: clamp(0.72rem, 1.4vw, 0.85rem);
+        color: rgba(255, 255, 255, 0.72);
+        letter-spacing: 0.08em;
+        line-height: 1.8;
+        max-width: 520px;
+        animation: bpFade 0.8s ease 0.5s both;
+    }
+
+    /* ─── Botones CTA ────────────────────────────────────── */
+    .cta-row {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        animation: bpFadeUp 0.8s ease 0.55s both;
+    }
+
+    .btn-filled,
+    .btn-ghost {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.7rem;
+        letter-spacing: 0.22em;
+        padding: 13px 34px;
+        text-decoration: none;
+        display: inline-block;
+        transition:
+            transform 0.22s ease,
+            box-shadow 0.22s ease,
+            background 0.22s ease,
+            color 0.22s ease;
+        cursor: pointer;
+    }
+    .btn-filled {
+        background: #fff;
+        color: #0c5ab4;
+        border: 2px solid #fff;
+    }
+    .btn-filled:hover {
+        background: transparent;
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    }
+    .btn-ghost {
+        background: transparent;
+        color: rgba(255, 255, 255, 0.8);
+        border: 2px solid rgba(255, 255, 255, 0.45);
+    }
+    .btn-ghost:hover {
+        border-color: #fff;
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ─── Estadísticas ───────────────────────────────────── */
+    .stats-row {
+        display: flex;
+        align-items: center;
+        gap: 2.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        animation: bpFade 0.8s ease 0.75s both;
+    }
+    .stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+    .stat-n {
+        font-family: 'Anton', sans-serif;
+        font-size: 1.55rem;
+        color: rgba(255, 255, 255, 0.95);
+        line-height: 1;
+    }
+    .stat-l {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.52rem;
+        letter-spacing: 0.2em;
+        color: rgba(255, 255, 255, 0.42);
+    }
+    .stat-sep {
+        width: 1px;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ─── Animaciones de entrada ─────────────────────────── */
+    @keyframes bpFadeDown {
+        from {
+            opacity: 0;
+            transform: translateY(-18px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes bpFadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(18px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes bpFade {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
