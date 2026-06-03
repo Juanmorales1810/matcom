@@ -1,0 +1,80 @@
+---
+import { Button } from '../ui/button';
+import Illustration from '../ui/Illustration.astro';
+import { Asterisk, CornerDownRight } from 'lucide-react';
+
+const process = [
+    {
+        step: '01',
+        title: 'Más de 20 años de experiencia en construcción',
+        description:
+            'Contamos con trayectoria real en obras, remodelaciones, viviendas y terminaciones. Sabemos resolver proyectos desde la base hasta los detalles finales.',
+    },
+    {
+        step: '02',
+        title: 'Atención directa del dueño',
+        description:
+            'Cada proyecto es supervisado con cercanía, responsabilidad y compromiso, cuidando que el resultado final cumpla con los estándares esperados.',
+    },
+    {
+        step: '03',
+        title: 'Terminaciones finas y carpintería de calidad',
+        description:
+            'Nos especializamos en detalles constructivos que marcan la diferencia: muebles, revestimientos, terminaciones, estructuras y soluciones personalizadas.',
+    },
+    {
+        step: '04',
+        title: 'Trabajo serio, responsable y confiable',
+        description:
+            'Nuestro objetivo es que cada cliente quede conforme con la ejecución, los tiempos y la calidad del trabajo realizado.',
+    },
+];
+---
+
+<section class="dark bg-background py-32">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-6 lg:gap-20">
+            <div class="top-10 col-span-2 h-fit w-fit gap-3 space-y-7 py-8 lg:sticky">
+                <div class="relative w-fit text-5xl font-semibold tracking-tight lg:text-7xl">
+                    {' '}
+                    <h2 class="text-secondary w-fit">Por qué elegirnos?</h2>
+                    <Asterisk
+                        className="text-secondary absolute -top-2 -right-2 size-5 md:size-10 lg:-right-14"
+                    />
+                </div>
+                <p class="text-foreground text-base">
+                    En MATCOM, nos destacamos por nuestra experiencia, compromiso con la calidad y
+                    atención personalizada. Ofrecemos soluciones constructivas confiables, adaptadas
+                    a las necesidades de nuestros clientes, garantizando resultados excepcionales en
+                    cada proyecto.
+                </p>
+
+                <Button
+                    variant="ghost"
+                    className="flex items-center justify-start gap-2 text-white">
+                    <CornerDownRight className="text-secondary" />
+                    Conoce más sobre nosotros
+                </Button>
+            </div>
+            <ul class="relative col-span-4 w-full lg:pl-22">
+                {
+                    process.map((step, index) => (
+                        <li class="relative flex flex-col justify-between gap-10 border-t py-8 md:flex-row lg:py-10">
+                            <Illustration class="text-secondary absolute top-4 right-0" />
+
+                            <div class="bg-secondary/30 text-secondary flex size-12 items-center justify-center px-4 py-1 tracking-tighter">
+                                0{index + 1}
+                            </div>
+                            <div class="">
+                                <h3 class="mb-4 text-2xl font-semibold tracking-tighter text-white lg:text-3xl">
+                                    {step.title}
+                                </h3>
+                                <p class="text-foreground/50">{step.description}</p>
+                            </div>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
+</section>
