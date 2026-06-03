@@ -1,0 +1,127 @@
+---
+import { ArrowUpRight, Plus } from 'lucide-react';
+import { Button } from '../ui/button';
+import { cn } from '@/lib/utils';
+import { Separator } from '../ui/separator';
+
+const services = [
+    {
+        title: 'Construcción general',
+        description:
+            'Ofrecemos servicios de construcción para proyectos residenciales, comerciales e industriales, garantizando calidad y cumplimiento.',
+        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/tirza-van-dijk-o1SKqmgSDbg-unsplash.jpg',
+    },
+    {
+        title: 'Remodelaciones',
+        description:
+            'Realizamos remodelaciones integrales para transformar espacios existentes, adaptándolos a las necesidades y gustos de nuestros clientes.',
+        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/adem-ay-Tk9m_HP4rgQ-unsplash.jpg',
+    },
+    {
+        title: 'Carpintería fina',
+        description:
+            'Brindamos servicios de carpintería fina para crear muebles personalizados, puertas, ventanas y otros elementos de madera con acabados de alta calidad.',
+        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/marvin-meyer-SYTO3xs06fU-unsplash.jpg',
+    },
+    {
+        title: 'Quinchos y espacios exteriores',
+        description:
+            'Diseñamos y construimos quinchos y espacios exteriores para disfrutar al máximo de su hogar, combinando funcionalidad y estética.',
+        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/christin-hume-Hcfwew744z4-unsplash.jpg',
+    },
+    {
+        title: 'Venta de materiales de construcción',
+        description:
+            'Ofrecemos una amplia gama de materiales de construcción de alta calidad para satisfacer las necesidades de sus proyectos.',
+        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/tirza-van-dijk-o1SKqmgSDbg-unsplash.jpg',
+    },
+];
+---
+
+<section class="relative py-32">
+    <div
+        class="absolute inset-0 z-0 opacity-50"
+        style={{
+            backgroundImage:
+                'radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.35) 1px, transparent 0)',
+            backgroundSize: '20px 20px',
+            WebkitMaskImage:
+                'linear-gradient(to left, #000 0%, #000 55%, transparent 20%, transparent 100%)',
+            maskImage:
+                'linear-gradient(to left, #000 0%, #000 55%, transparent 20%, transparent 100%)',
+        }}>
+    </div>
+    <div class="relative z-10 container mx-auto px-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+                <span class="bg-primary size-3 rounded-sm"></span>
+                <p class="tracking-tight">Nuestros Servicios</p>
+            </div>
+            <p class="text-sm">
+                <span class="font-mono">+3000</span> proyectos completados con éxito
+            </p>
+        </div>
+        <div class="mt-20 grid grid-cols-1 gap-20 lg:grid-cols-7">
+            <div class="col-span-3 flex flex-col gap-7">
+                <h2 class="text-7xl font-semibold">Construcción confiable para proyectos</h2>
+                <p class="text-muted-foreground text-lg">
+                    En MATCOM trabajamos con compromiso, responsabilidad y atención directa de su
+                    dueño. Nuestro enfoque está en entregar soluciones constructivas bien
+                    ejecutadas, con terminaciones cuidadas y un servicio pensado para clientes que
+                    buscan confianza, calidad y cumplimiento.
+                </p>
+                <Separator />
+                <div class="flex flex-col gap-5 tracking-tight">
+                    <div class="flex items-center gap-2.5">
+                        <span class="bg-muted grid size-6 shrink-0 place-items-center rounded-full">
+                            <Plus className="size-3.5" />
+                        </span>
+                        <p class="font-medium">Impulsa el compromiso y los resultados</p>
+                    </div>
+                    <div class="flex items-center gap-2.5">
+                        <span class="bg-muted grid size-6 shrink-0 place-items-center rounded-full">
+                            <Plus className="size-3.5" />
+                        </span>
+                        <p class="font-medium">Preparado para el crecimiento del mañana</p>
+                    </div>
+                </div>
+                <Button className="w-fit" size="lg">
+                    Comenzar <ArrowUpRight />
+                </Button>
+            </div>
+            <div class="col-span-4 space-y-4">
+                {
+                    services.map((service, index) => (
+                        <div class="bg-muted dark:bg-card flex items-center justify-between rounded-md border py-2 pr-6 pl-2">
+                            <div class="flex items-center gap-5">
+                                <img
+                                    src={service.image}
+                                    alt={service.title}
+                                    class="h-20 w-32 rounded-sm border object-cover"
+                                />
+                                <div class="flex flex-col">
+                                    <h3 class="text-lg font-medium tracking-tight">
+                                        {service.title}
+                                    </h3>
+                                    <p class="text-muted-foreground tracking-tight">
+                                        {service.description}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hidden items-center gap-1.5 sm:flex">
+                                {Array.from({ length: services.length }).map((_, i) => (
+                                    <span
+                                        class={cn(
+                                            'size-2.5 rounded-full',
+                                            i <= index ? 'bg-primary' : 'bg-muted-foreground/20'
+                                        )}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>
