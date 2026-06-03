@@ -1,9 +1,15 @@
 ---
-
+import Matcon from '../icons/matcon.astro';
 ---
 
 <section
-    class="hero-bp relative m-2 h-[calc(100dvh-1rem)] overflow-hidden rounded-3xl md:m-4 md:h-[calc(100dvh-2rem)]">
+    class="hero-bp bg-primary relative m-2 h-[calc(100dvh-1rem)] overflow-hidden rounded-3xl md:m-4 md:h-[calc(100dvh-2rem)]">
+    <div
+        class="absolute inset-0 z-0"
+        style={{
+            backgroundImage: `radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.6), transparent)`,
+        }}>
+    </div>
     <!-- Cuadrícula de plano arquitectónico -->
     <div class="bp-grid absolute inset-0" aria-hidden="true"></div>
 
@@ -30,7 +36,7 @@
         <div class="ref-circle" style="bottom: 24%; right: 9%">B2</div>
 
         <!-- Rosa de los vientos -->
-        <div class="compass-wrap" style="bottom: 2.5rem; right: 2.5rem">
+        <div class="absolute" style="bottom: 2.5rem; right: 2.5rem">
             <svg
                 width="52"
                 height="52"
@@ -103,13 +109,14 @@
         <!-- Etiqueta de clasificación -->
         <div class="clasif-badge">
             <span class="cb-line"></span>
-            <span class="text-sm">◆ EMPRESA CONSTRUCTORA ◆</span>
+            <span class="text-sm text-white">◆ EMPRESA CONSTRUCTORA ◆</span>
             <span class="cb-line"></span>
         </div>
 
         <!-- Título isométrico principal -->
         <div class="iso-wrap">
-            <h1 class="iso-title pt-4 pb-8">MATCOM</h1>
+            <!-- <h1 class="iso-title pt-4 pb-8">MATCOM</h1> -->
+            <Matcon class="iso-title w-fill w-xs pt-4 pb-8 md:w-4xl" />
             <!-- Líneas de cota superior/inferior del título -->
             <div class="title-cota title-cota-top"></div>
             <div class="title-cota title-cota-bot"></div>
@@ -118,12 +125,12 @@
         <!-- Regla decorativa con eslogan -->
         <div class="eslogan-row">
             <span class="esl-tick"></span>
-            <span class="esl-text text-sm">CONSTRUYENDO EL FUTURO CON PRECISIÓN</span>
+            <span class="esl-text text-sm text-white">CONSTRUYENDO EL FUTURO CON PRECISIÓN</span>
             <span class="esl-tick"></span>
         </div>
 
         <!-- Descripción -->
-        <p class="desc-text text-base">
+        <p class="desc-text text-base text-white">
             Soluciones constructivas de alto desempeño.<br />
             Innovación, calidad y excelencia en cada proyecto.
         </p>
@@ -155,13 +162,9 @@
 </section>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Share+Tech+Mono&display=swap');
-
     /* ─── Base ─────────────────────────────────────────── */
     .hero-bp {
-        background-color: #0c5ab4;
         color: #fff;
-        font-family: 'Montserrat', sans-serif;
     }
 
     /* ─── Cuadrícula de plano ───────────────────────────── */
