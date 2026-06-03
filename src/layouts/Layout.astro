@@ -20,12 +20,19 @@ interface Props {
 const { title, description, preload, canonical, image } = Astro.props;
 import '@/styles/global.css';
 import Footer from '@/components/interfaces/Footer.astro';
-import Header from '@/components/interfaces/Header.astro';
+import { Header } from '@/components/interfaces/Header';
 ---
 
 <!doctype html>
 <html lang="es">
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
         <SEO
             canonical={canonical}
             description={description}
@@ -35,8 +42,8 @@ import Header from '@/components/interfaces/Header.astro';
         />
         <ClientRouter />
     </head>
-    <body class="bg-background relative overflow-x-hidden antialiased">
-        <Header />
+    <body class="bg-background font-rajdhani relative overflow-x-hidden antialiased">
+        <Header client:load />
         <slot />
         <Footer />
     </body>
