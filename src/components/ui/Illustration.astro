@@ -1,0 +1,22 @@
+---
+//props
+const { ...props } = Astro.props;
+---
+
+<svg
+    width="22"
+    height="20"
+    viewBox="0 0 22 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}>
+    <line
+        x1="0.607422"
+        y1="2.57422"
+        x2="21.5762"
+        y2="2.57422"
+        stroke="currentColor"
+        stroke-width="4"></line>
+    <line x1="19.5762" y1="19.624" x2="19.5762" y2="4.57422" stroke="currentColor" stroke-width="4"
+    ></line>
+</svg>
