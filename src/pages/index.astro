@@ -1,6 +1,15 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Hero from '@/components/interfaces/Hero.astro';
+import { Feature } from '@/components/interfaces/Feature';
+import Services from '@/components/interfaces/Services.astro';
+import WhyUs from '@/components/interfaces/WhyUs.astro';
+import Diferenciadores from '@/components/interfaces/Diferenciadores.astro';
+import { Timeline } from '@/components/interfaces/Timeline';
+import { Gallery } from '@/components/interfaces/Gallery';
+import { Testimonial } from '@/components/interfaces/Testimonial';
+import { Faq } from '@/components/interfaces/Faq';
+import Contacto from '@/components/interfaces/Contacto.astro';
 ---
 
 <Layout
@@ -9,4 +18,13 @@ import Hero from '@/components/interfaces/Hero.astro';
     canonical="agregarurl.com/"
     image="agregarurl.com/metadata.jpg">
     <Hero />
+    <Feature client:idle />
+    <Services />
+    <WhyUs />
+    <Diferenciadores />
+    <Timeline client:idle />
+    <Gallery client:idle />
+    <Testimonial client:idle />
+    <Faq client:idle />
+    <Contacto />
 </Layout>
