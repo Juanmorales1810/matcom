@@ -1,0 +1,128 @@
+---
+const differentiators = [
+    {
+        number: '01',
+        kicker: 'Obra',
+        title: 'Experiencia real en obra',
+        description:
+            'No somos solo una empresa de contacto. Tenemos experiencia directa en construcción, resolución de problemas y ejecución en terreno.',
+        note: 'Resolución directa en terreno',
+    },
+    {
+        number: '02',
+        kicker: 'Detalle',
+        title: 'Terminaciones cuidadas',
+        description:
+            'Nos enfocamos en los detalles que muchas veces otros dejan de lado: nivelaciones, uniones, acabados, carpintería, revestimientos y estética final.',
+        note: 'Acabados que sostienen el resultado final',
+    },
+    {
+        number: '03',
+        kicker: 'Medida',
+        title: 'Trabajo personalizado',
+        description:
+            'Cada proyecto se analiza según las necesidades del cliente, el espacio, el presupuesto y el resultado esperado.',
+        note: 'Cada decisión responde al contexto real',
+    },
+    {
+        number: '04',
+        kicker: 'Respaldo',
+        title: 'Responsabilidad y seriedad',
+        description:
+            'Buscamos construir relaciones de confianza con nuestros clientes, entregando claridad y compromiso durante el proceso.',
+        note: 'Comunicación clara durante todo el proceso',
+    },
+];
+
+const highlights = ['Supervisión cercana', 'Acabados precisos', 'Trato directo'];
+---
+
+<section id="diferenciadores" class="relative isolate overflow-hidden py-24 sm:py-28">
+    <div class="absolute inset-0 -z-20 bg-stone-950/3"></div>
+    <div
+        class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,var(--color-primary),transparent_28%),radial-gradient(circle_at_bottom_right,var(--color-primary),transparent_34%)] opacity-30">
+    </div>
+    <div
+        class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(120,113,108,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(120,113,108,0.1)_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-50">
+    </div>
+
+    <div class="relative container mx-auto px-4">
+        <div
+            class="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.15fr)] lg:items-start lg:gap-16">
+            <div class="lg:sticky lg:top-24">
+                <div
+                    class="inline-flex items-center gap-3 rounded-full border border-stone-300/80 bg-white/80 px-4 py-2 text-[0.72rem] font-semibold tracking-[0.35em] text-stone-700 uppercase shadow-[0_18px_40px_-28px_rgba(28,25,23,0.45)] backdrop-blur">
+                    <span class="bg-primary size-2 rounded-full"></span>
+                    Sección diferenciadores
+                </div>
+
+                <h2
+                    class="font-rajdhani text-foreground mt-6 max-w-xl text-4xl leading-none font-semibold tracking-tight uppercase sm:text-5xl lg:text-6xl">
+                    Calidad, confianza y experiencia en cada proyecto
+                </h2>
+
+                <p
+                    class="text-foreground/70 mt-6 max-w-xl text-base leading-7 font-medium sm:text-xl">
+                    En construcción, la confianza es clave. Por eso en MATCOM trabajamos con una
+                    propuesta clara: entregar soluciones bien hechas, con supervisión cercana y
+                    terminaciones que reflejen experiencia.
+                </p>
+
+                <div class="mt-10 grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                    {
+                        highlights.map((item) => (
+                            <div class="rounded-2xl border border-white/70 bg-white/75 px-4 py-4 shadow-[0_18px_40px_-30px_rgba(28,25,23,0.35)] backdrop-blur">
+                                <span class="font-rajdhani block text-lg font-semibold tracking-[0.18em] text-stone-900 uppercase">
+                                    {item}
+                                </span>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <div class="grid gap-5 md:grid-cols-2">
+                {
+                    differentiators.map((item, index) => (
+                        <article
+                            class:list={[
+                                'group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-stone-200/80 bg-white/85 p-6 shadow-[0_24px_60px_-30px_rgba(28,25,23,0.28)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_70px_-28px_rgba(28,25,23,0.36)] sm:p-7',
+                            ]}>
+                            <div class="via-primary absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent to-transparent" />
+                            <div class="font-rajdhani absolute top-4 right-5 text-7xl leading-none font-semibold tracking-tight text-stone-200/80 transition duration-300 group-hover:text-stone-300">
+                                {item.number}
+                            </div>
+                            <div class="absolute -bottom-10 left-0 h-28 w-28 rounded-full bg-amber-100/80 blur-3xl transition duration-300 group-hover:bg-amber-200" />
+
+                            <div class="relative flex h-full flex-col">
+                                <div class="mb-9 flex items-center justify-between gap-4">
+                                    <span class="font-rajdhani bg-primary/10 border-primary/20 text-primary inline-flex rounded-full border px-3 py-1 text-sm font-semibold tracking-[0.28em] uppercase">
+                                        {item.kicker}
+                                    </span>
+                                    <span class="h-px flex-1 bg-linear-to-r from-stone-200 to-transparent" />
+                                </div>
+
+                                <h3 class="max-w-xs text-2xl font-semibold tracking-tight text-stone-950 sm:text-[1.75rem]">
+                                    {item.title}
+                                </h3>
+
+                                <p class="mt-4 text-sm leading-7 text-stone-600 sm:text-base">
+                                    {item.description}
+                                </p>
+
+                                <div class="mt-auto pt-8">
+                                    <div class="flex items-center gap-3 border-t border-dashed border-stone-200 pt-5 text-sm text-stone-500">
+                                        <span class="font-rajdhani text-lg font-semibold tracking-[0.25em] text-stone-950 uppercase">
+                                            {item.number}
+                                        </span>
+                                        <span>{item.note}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>
