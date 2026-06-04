@@ -32,26 +32,23 @@ const Header = ({ className }: HeaderProps) => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', href: '#' },
-        { name: 'About', href: '#about' },
-        { name: 'Pricing', href: '#pricing' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Inicio', href: '#' },
+        { name: 'Servicios', href: '#servicios' },
+        { name: 'Proyectos', href: '#proyectos' },
+        { name: 'Nosotros', href: '#nosotros' },
+        { name: 'Contacto', href: '#contacto' },
     ];
 
     return (
-        <section className={cn('fixed inset-x-0 top-4.5 z-50', className)}>
+        <header className={cn('bg fixed inset-x-0 z-50', className)}>
             <div className="container mx-auto px-4">
                 <nav className="w-full">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="flex h-16 items-center justify-between">
                             <div className="flex items-center gap-2">
-                                <img
-                                    src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg"
-                                    className="max-h-8 invert"
-                                    alt="shadcnblocks.com"
-                                />
-                                <span className="text-lg font-semibold tracking-tighter text-white">
-                                    Shadcnblocks.com
+                                <img src="/logo-header.svg" className="max-h-8" alt="Matcom" />
+                                <span className="text-xl font-semibold tracking-tighter text-white md:text-3xl">
+                                    Matcom
                                 </span>
                             </div>
                             <div className="hidden items-center space-x-8 md:flex">
@@ -59,7 +56,7 @@ const Header = ({ className }: HeaderProps) => {
                                     <a
                                         key={link.name}
                                         href={link.href}
-                                        className="group relative inline-block h-6 overflow-hidden text-sm font-medium text-white hover:text-white/80">
+                                        className="group relative inline-block h-8 overflow-hidden text-xl font-medium text-white hover:text-white/80 md:text-3xl">
                                         <span className="block transition-transform duration-300 group-hover:-translate-y-full">
                                             {link.name}
                                         </span>
@@ -69,8 +66,8 @@ const Header = ({ className }: HeaderProps) => {
                                     </a>
                                 ))}
                             </div>
-                            <div className="hidden items-center space-x-2 text-sm text-white lg:flex">
-                                <span className="font-medium">Brisbane</span>
+                            <div className="hidden items-center space-x-2 text-xl text-white md:text-3xl lg:flex">
+                                <span className="font-medium">Santiago</span>
                                 <span className="text-white/80">/</span>
 
                                 <span className="font-medium">
@@ -97,12 +94,12 @@ const Header = ({ className }: HeaderProps) => {
                                                     className="text-foreground flex items-center justify-start gap-2 text-2xl font-bold"
                                                     onClick={() => setIsOpen(false)}>
                                                     <img
-                                                        src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg"
-                                                        className="max-h-8 dark:invert"
-                                                        alt="shadcnblocks.com"
+                                                        src="/logo-header.svg"
+                                                        className="max-h-12"
+                                                        alt="Matcom"
                                                     />
                                                     <span className="text-lg font-semibold tracking-tighter">
-                                                        Shadcnblocks.com
+                                                        Matcom
                                                     </span>
                                                 </a>
                                             </div>
@@ -133,7 +130,7 @@ const Header = ({ className }: HeaderProps) => {
                     </div>
                 </nav>
             </div>
-        </section>
+        </header>
     );
 };
 

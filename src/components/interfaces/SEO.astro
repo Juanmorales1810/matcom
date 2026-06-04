@@ -22,7 +22,7 @@ const {
     description,
     preload,
     canonical,
-    image = 'poner aqui una imagen por defecto',
+    image = 'https://matcom.cl/og-image.jpg',
 } = Astro.props as Props;
 ---
 
@@ -42,7 +42,10 @@ const {
 <meta name="theme-color" content="#0f172a" />
 
 <!-- Aca se ponen las keywords -->
-<meta name="keywords" content="" />
+<meta
+    name="keywords"
+    content="construcción, constructora, remodelación, carpintería, quinchos, materiales de construcción, Santiago, Chile"
+/>
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
@@ -60,10 +63,10 @@ const {
 <meta name="robots" content="index, follow" />
 <meta name="googlebot" content="index, follow" />
 
-<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-<link rel="apple-touch-icon" href="/favicon.png" />
+<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 <meta name="msapplication-config" content="/browserconfig.xml" />
 
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8HX1KZP5F"></script>

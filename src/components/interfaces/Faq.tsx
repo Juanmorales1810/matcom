@@ -41,7 +41,7 @@ const Faq = () => {
                             <div className="mb-8 flex items-start gap-3 sm:gap-4 lg:mb-12">
                                 <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl sm:h-16 sm:w-16">
                                     <img
-                                        src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp"
+                                        src="https://i.pravatar.cc/150?img=12"
                                         alt="Sarah Johnson"
                                         className="h-full w-full object-cover"
                                     />

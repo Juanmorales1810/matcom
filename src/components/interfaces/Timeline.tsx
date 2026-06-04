@@ -9,40 +9,40 @@ const sections = [
         subTitle: 'Contacto inicial',
         title: 'Contacto inicial y evaluación de necesidades',
         description: 'Recibimos tu solicitud por WhatsApp, teléfono o formulario web.',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg',
+        image: 'https://picsum.photos/seed/contact1/800/600',
     },
     {
         subTitle: 'Evaluación del proyecto',
         title: 'Evaluación del proyecto y planificación',
         description:
             'Analizamos el tipo de trabajo, ubicación, medidas, materiales y necesidades específicas.',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-2.svg',
+        image: 'https://picsum.photos/seed/eval2/800/600',
     },
     {
         subTitle: 'Cotización',
         title: 'Cotización y propuesta personalizada',
         description: 'Preparamos una propuesta según el requerimiento del cliente.',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-3.svg',
+        image: 'https://picsum.photos/seed/quote3/800/600',
     },
     {
         subTitle: 'Planificación',
         title: 'Planificación y ejecución del proyecto',
         description: 'Organizamos etapas, materiales y tiempos de ejecución.',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg',
+        image: 'https://picsum.photos/seed/plan4/800/600',
     },
     {
         subTitle: 'Ejecución',
         title: 'Ejecución del proyecto',
         description:
             'Llevamos a cabo el proyecto según lo planificado, asegurando calidad y cumplimiento de plazos.',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-2.svg',
+        image: 'https://picsum.photos/seed/execute5/800/600',
     },
     {
         subTitle: 'Entrega final',
         title: 'Entrega final del proyecto',
         description:
             'Realizamos la entrega final del proyecto, asegurando que todo esté conforme a lo planificado y cumpla con los estándares de calidad.',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-3.svg',
+        image: 'https://picsum.photos/seed/deliver6/800/600',
     },
 ];
 
@@ -85,8 +85,55 @@ const Timeline = ({ className }: TimelineProps) => {
     }, []);
 
     return (
-        <section className={cn('py-32', className)}>
-            <div className="container mx-auto max-w-7xl px-4">
+        <section className={cn('relative py-32', className)}>
+            <div
+                className="absolute inset-0 z-0"
+                style={{
+                    backgroundImage: `
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      `,
+                    backgroundSize: '40px 40px',
+                    backgroundPosition: '0 0, 0 0',
+                    maskImage: `
+        repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)
+      `,
+                    WebkitMaskImage: `
+  repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)
+      `,
+                    maskComposite: 'intersect',
+                    WebkitMaskComposite: 'source-in',
+                }}
+            />
+            <div className="relative z-10 container mx-auto max-w-7xl px-4">
                 <h2 className="mb-14 max-w-2xl text-4xl font-semibold text-balance md:text-5xl">
                     Cómo trabajamos
                 </h2>

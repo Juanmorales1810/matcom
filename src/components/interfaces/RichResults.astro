@@ -1,20 +1,52 @@
 ---
-// import { BOXERS } from "@/consts/boxers"
-
-/** https://developers.google.com/search/docs/appearance/structured-data/organization */
-const organizationSchema = {
+/** https://developers.google.com/search/docs/appearance/structured-data/local-business */
+const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    url: 'agregarurl.com/',
-    image: 'agregarurl.com/metadata.jpg',
-    sameAs: ['https://www.instagram.com/agregarInstagram/'],
-    logo: 'agregarurl.com/metadata.jpg',
-    name: 'Nombre de la organización',
-    email: 'correodelaorganizacion@agregarurl.com',
-    telephone: 'agregar telefono con codigo de pais',
-    alternateName: 'Nombre alternativo de la organización',
-    description: 'Descripción de la organización',
+    '@type': 'GeneralContractor',
+    name: 'Matcom',
+    url: 'https://matcom.cl/',
+    image: 'https://matcom.cl/og-image.jpg',
+    logo: 'https://matcom.cl/favicon.svg',
+    // TODO: reemplazar con datos reales
+    email: 'info@matcom.cl',
+    telephone: '+56 2 1234 5678',
+    // TODO: agregar dirección real
+    address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Av. Principal 123',
+        addressLocality: 'Santiago',
+        addressRegion: 'RM',
+        postalCode: '8320000',
+        addressCountry: 'CL',
+    },
+    // TODO: гео координаты desde Google Maps
+    geo: {
+        '@type': 'GeoCoordinates',
+        latitude: -33.4489,
+        longitude: -70.6693,
+    },
+    openingHoursSpecification: [
+        {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '08:00',
+            closes: '18:00',
+        },
+    ],
+    // TODO: agregar redes sociales reales
+    sameAs: [
+        'https://www.instagram.com/matcom/',
+        'https://www.facebook.com/matcom/',
+        'https://www.linkedin.com/company/matcom/',
+    ],
+    description:
+        'Matcom es una empresa constructora con más de 15 años de experiencia en proyectos residenciales, comerciales e industriales en Chile.',
+    priceRange: '$$',
+    areaServed: {
+        '@type': 'State',
+        name: 'Región Metropolitana',
+    },
 };
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(localBusinessSchema)} />

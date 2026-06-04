@@ -208,32 +208,32 @@ const visuals = [
     {
         text: 'Construcción de viviendas unifamiliares con enfoque en diseño y calidad.',
         className: 'bg-blue-100 dark:bg-blue-900',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri4/img11.png',
+        image: 'https://picsum.photos/seed/construction1/1920/1080',
         textPosition: 'left',
     },
 
     {
         text: 'Remodelaciones interiores que transforman espacios en hogares funcionales y estéticamente agradables.',
         className: 'bg-green-100 dark:bg-green-900',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/img5.jpeg',
+        image: 'https://picsum.photos/seed/interior2/1920/1080',
         textPosition: 'top',
     },
     {
         text: 'Quinchos y terrazas diseñados para maximizar el disfrute de los espacios al aire libre con estilo y durabilidad.',
         className: 'bg-purple-100 dark:bg-purple-900',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-uR__S5GX8Io-unsplash.jpg',
+        image: 'https://picsum.photos/seed/terrace3/1920/1080',
         textPosition: 'bottom',
     },
     {
-        text: 'Carpintería fina que combina artesanía tradicional con técnicas modernas para crear piezas únicas y funcionales. ',
+        text: 'Carpintería fina que combina artesanía tradicional con técnicas modernas para crear piezas únicas y funcionales.',
         className: 'bg-pink-100 dark:bg-pink-900',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw15.jpeg',
+        image: 'https://picsum.photos/seed/woodwork4/1920/1080',
         textPosition: 'top',
     },
     {
         text: 'Terminaciones profesionales que garantizan la durabilidad y estética de cada proyecto.',
         className: 'bg-orange-100 dark:bg-orange-900',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/img23.jpeg',
+        image: 'https://picsum.photos/seed/finishing5/1920/1080',
         textPosition: 'left',
     },
 ] as const satisfies readonly Visual[];
@@ -304,11 +304,11 @@ const Gallery = () => {
     };
 
     return (
-        <section className="py-32">
+        <section id="proyectos" className="dark bg-background py-32">
             <div className="container mx-auto overflow-visible">
                 <div className="flex flex-col gap-14">
                     <div className="">
-                        <h3 className="text-3xl font-semibold tracking-tight uppercase md:text-4xl lg:text-5xl">
+                        <h3 className="text-secondary text-3xl font-semibold tracking-tight uppercase md:text-4xl lg:text-5xl">
                             Trabajos realizados por MATCOM
                         </h3>
                         <p className="text-muted-foreground max-w-2xl text-lg font-medium">
@@ -320,7 +320,7 @@ const Gallery = () => {
                     <div className="relative space-y-10">
                         <div
                             ref={containerRef}
-                            className="no-scrollbar flex snap-x snap-mandatory flex-nowrap items-center gap-10 overflow-x-auto overflow-y-hidden scroll-smooth px-4"
+                            className="no-scrollbar hover:scrollbar-thumb-secondary flex snap-x snap-mandatory scrollbar-thumb-transparent flex-nowrap items-center gap-10 overflow-x-auto overflow-y-hidden scroll-smooth px-4"
                             style={{
                                 scrollSnapType: 'x mandatory',
                                 scrollBehavior: 'smooth',

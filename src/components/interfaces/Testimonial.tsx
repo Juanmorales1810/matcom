@@ -16,8 +16,8 @@ const Testimonial = () => {
                     </p>
                     <div className="grid grid-cols-1 items-stretch gap-x-0 gap-y-4 lg:grid-cols-3 lg:gap-4">
                         <img
-                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg"
-                            alt="placeholder"
+                            src="https://picsum.photos/seed/testimonial1/800/600"
+                            alt="Cliente satisfecho con proyecto de construcción"
                             className="h-72 w-full rounded-md object-cover lg:h-auto"
                         />
                         <Card className="col-span-2 flex items-center justify-center p-6">
@@ -47,8 +47,8 @@ const Testimonial = () => {
                                 <div className="flex gap-4 leading-5">
                                     <Avatar className="ring-input size-9 rounded-full ring-1">
                                         <AvatarImage
-                                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp"
-                                            alt="placeholder"
+                                            src="https://i.pravatar.cc/150?img=5"
+                                            alt="María González"
                                         />
                                     </Avatar>
                                     <div className="text-sm">
@@ -68,8 +68,8 @@ const Testimonial = () => {
                                 <div className="flex gap-4 leading-5">
                                     <Avatar className="ring-input size-9 rounded-full ring-1">
                                         <AvatarImage
-                                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp"
-                                            alt="placeholder"
+                                            src="https://i.pravatar.cc/150?img=3"
+                                            alt="Carlos Ramírez"
                                         />
                                     </Avatar>
                                     <div className="text-sm">
@@ -89,8 +89,8 @@ const Testimonial = () => {
                                 <div className="flex gap-4 leading-5">
                                     <Avatar className="ring-input size-9 rounded-full ring-1">
                                         <AvatarImage
-                                            src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-4.webp"
-                                            alt="placeholder"
+                                            src="https://i.pravatar.cc/150?img=9"
+                                            alt="Ana López"
                                         />
                                     </Avatar>
                                     <div className="text-sm">
