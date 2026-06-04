@@ -52,6 +52,30 @@
             background-position: 0% 0%;
         }
     }
+    @keyframes nav-shadown {
+        0% {
+            box-shadow: none;
+            backdrop-filter: blur(0);
+            background: transparent;
+            top: 24px;
+            border-radius: 0;
+        }
+        to {
+            box-shadow:
+                0 10px 15px -3px rgb(0 0 0 / 0.1),
+                0 4px 6px -4px rgb(0 0 0 / 0.1);
+            color: white;
+            backdrop-filter: blur(10px);
+            background: rgba(0 0 0 / 0.8);
+            top: 0;
+            border-radius: 0 0 2rem 2rem;
+        }
+    }
+}
+header {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 300px;
 }
 
 :root {
