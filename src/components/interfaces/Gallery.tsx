@@ -206,42 +206,35 @@ const GalleryPaginationDot = ({
 
 const visuals = [
     {
-        text: 'Modern design principles create intuitive interfaces that users love and trust.',
+        text: 'Construcción de viviendas unifamiliares con enfoque en diseño y calidad.',
         className: 'bg-blue-100 dark:bg-blue-900',
         image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri4/img11.png',
         textPosition: 'left',
     },
 
     {
-        text: 'Creative process drives innovation through iterative design and user feedback.',
+        text: 'Remodelaciones interiores que transforman espacios en hogares funcionales y estéticamente agradables.',
         className: 'bg-green-100 dark:bg-green-900',
         image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/img5.jpeg',
         textPosition: 'top',
     },
     {
-        text: 'Artistic vision transforms complex ideas into beautiful, engaging visual experiences.',
+        text: 'Quinchos y terrazas diseñados para maximizar el disfrute de los espacios al aire libre con estilo y durabilidad.',
         className: 'bg-purple-100 dark:bg-purple-900',
-        // image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-xOLhD-qfoRI-unsplash.jpg",
         image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-uR__S5GX8Io-unsplash.jpg',
         textPosition: 'bottom',
     },
     {
-        text: 'Digital art combines traditional aesthetics with modern interactive capabilities.',
+        text: 'Carpintería fina que combina artesanía tradicional con técnicas modernas para crear piezas únicas y funcionales. ',
         className: 'bg-pink-100 dark:bg-pink-900',
         image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw15.jpeg',
         textPosition: 'top',
     },
     {
-        text: 'Innovation hub brings together cutting-edge technology with human-centered design.',
+        text: 'Terminaciones profesionales que garantizan la durabilidad y estética de cada proyecto.',
         className: 'bg-orange-100 dark:bg-orange-900',
         image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/img23.jpeg',
         textPosition: 'left',
-    },
-    {
-        text: 'Visual storytelling connects audiences through compelling narratives and imagery.',
-        className: 'bg-indigo-100 dark:bg-indigo-900',
-        image: 'https://deifkwefumgah.cloudfront.net/shadcnblocks/block/guri3/img4.jpeg',
-        textPosition: 'top',
     },
 ] as const satisfies readonly Visual[];
 const Gallery = () => {
@@ -314,9 +307,15 @@ const Gallery = () => {
         <section className="py-32">
             <div className="container mx-auto overflow-visible">
                 <div className="flex flex-col gap-14">
-                    <h3 className="text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-                        Our Creative Gallery
-                    </h3>
+                    <div className="">
+                        <h3 className="text-3xl font-semibold tracking-tight uppercase md:text-4xl lg:text-5xl">
+                            Trabajos realizados por MATCOM
+                        </h3>
+                        <p className="text-muted-foreground max-w-2xl text-lg font-medium">
+                            Aquí podrás conocer parte de nuestros proyectos, procesos constructivos
+                            y terminaciones.
+                        </p>
+                    </div>
 
                     <div className="relative space-y-10">
                         <div

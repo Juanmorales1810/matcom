@@ -10,24 +10,24 @@ import { cn } from '@/lib/utils';
 
 const items = [
     {
-        question: 'What services do you offer?',
-        answer: 'We provide a comprehensive range of services tailored to meet your needs. From consultation and planning to implementation and ongoing support, our team is equipped to handle projects of all sizes. Contact us for a detailed overview of our offerings.',
+        question: '¿MATCOM realiza construcción de viviendas completas?',
+        answer: 'Sí. Realizamos construcción general, ampliaciones y soluciones habitacionales según las necesidades del cliente.',
     },
     {
-        question: 'How do I get started?',
-        answer: "Getting started is easy! Simply reach out to us through our contact form or give us a call. We'll schedule a consultation to discuss your needs, answer any questions, and create a customized plan that works best for you and your timeline.",
+        question: '¿Realizan remodelaciones de casas?',
+        answer: 'Sí. Trabajamos en remodelaciones interiores, exteriores, cocinas, baños, quinchos y mejoras generales.',
     },
     {
-        question: 'What are your pricing options?',
-        answer: "Our pricing is flexible and depends on the scope of your project and specific requirements. We offer various packages to accommodate different budgets and needs. We're happy to provide a detailed quote after understanding your project requirements.",
+        question: '¿Puedo solicitar una cotización por WhatsApp?',
+        answer: 'Sí. Puedes contactarnos directamente por WhatsApp para explicar tu proyecto y coordinar una evaluación.',
     },
     {
-        question: 'Do you offer support after completion?',
-        answer: 'Absolutely! We believe in building long-term relationships with our clients. We provide ongoing support, maintenance, and are always available to help with any questions or additional needs that may arise after project completion.',
+        question: '¿Trabajan en La Serena y Coquimbo?',
+        answer: 'Sí. Prestamos servicios en La Serena, Coquimbo y sectores cercanos de la Región de Coquimbo.',
     },
     {
-        question: 'What makes you different from competitors?',
-        answer: 'We pride ourselves on our personalized approach, attention to detail, and commitment to customer satisfaction. Our experienced team combines expertise with creativity to deliver exceptional results. We focus on understanding your unique needs and exceeding your expectations.',
+        question: '¿MATCOM realiza carpintería fina?',
+        answer: 'Sí. La carpintería fina y las terminaciones son uno de los principales diferenciales de la empresa.',
     },
 ];
 
@@ -41,35 +41,36 @@ const Faq = () => {
                             <div className="mb-8 flex items-start gap-3 sm:gap-4 lg:mb-12">
                                 <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl sm:h-16 sm:w-16">
                                     <img
-                                        src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp"
+                                        src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp"
                                         alt="Sarah Johnson"
                                         className="h-full w-full object-cover"
                                     />
                                 </div>
                                 <div className="min-w-0">
                                     <h2 className="mb-1 text-lg leading-tight font-semibold sm:text-xl">
-                                        Sarah Johnson
+                                        John Doe
                                     </h2>
-                                    <p className="text-sm sm:text-base">Customer Support Lead</p>
+                                    <p className="text-sm sm:text-base">Atención al cliente</p>
                                 </div>
                             </div>
 
                             <div className="space-y-4 lg:space-y-6">
                                 <h3 className="text-lg leading-tight font-semibold sm:text-xl">
-                                    Still have questions?
+                                    ¿Aún tienes preguntas?
                                 </h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed sm:text-base">
-                                    Can't find what you're looking for? Our team is here to help!
-                                    Whether you need clarification, have a specific question, or
-                                    want to learn more about our services, we'd love to hear from
-                                    you. Let's get you the answers you need.
+                                    ¿No encuentras lo que estás buscando? ¡Nuestro equipo está aquí
+                                    para ayudarte! Ya sea que necesites aclaraciones, tengas una
+                                    pregunta específica o quieras aprender más sobre nuestros
+                                    servicios, nos encantaría saber de ti. Estamos aquí para
+                                    proporcionarte las respuestas que necesitas.
                                 </p>
                             </div>
                         </div>
                         <div className="py-4">
                             <div className="group flex h-auto p-0 text-start text-base font-medium hover:bg-transparent sm:text-xl">
                                 <span className="border-border border-b-2 pb-0.5 transition-colors">
-                                    Contact us
+                                    Contáctanos
                                 </span>
                                 <ArrowUpRight className="ml-1 h-6 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                             </div>

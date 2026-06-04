@@ -69,7 +69,7 @@ const Contact = (props: Props) => {
             setTimeout(() => setIsSubmitted(false), 5000);
         } catch {
             form.setError('root', {
-                message: 'Something went wrong. Please try again.',
+                message: 'Algo salió mal. Por favor, inténtalo de nuevo.',
             });
         }
     };
@@ -83,7 +83,7 @@ const Contact = (props: Props) => {
                         showSuccess ? 'opacity-100' : 'opacity-0'
                     )}>
                     <p className="text-sm font-medium text-green-600 dark:text-green-400">
-                        Thanks — we will get back to you shortly.
+                        ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.
                     </p>
                 </div>
             )}
@@ -95,8 +95,8 @@ const Contact = (props: Props) => {
                         name="fullName"
                         render={({ field, fieldState }) => (
                             <Field data-invalid={fieldState.invalid}>
-                                <FieldLabel htmlFor={field.name}>
-                                    Full name <span className="text-destructive">*</span>
+                                <FieldLabel className="text-secondary" htmlFor={field.name}>
+                                    Nombre completo <span className="text-destructive">*</span>
                                 </FieldLabel>
                                 <Input
                                     {...field}
@@ -115,8 +115,8 @@ const Contact = (props: Props) => {
                         name="email"
                         render={({ field, fieldState }) => (
                             <Field data-invalid={fieldState.invalid}>
-                                <FieldLabel htmlFor={field.name}>
-                                    Work email address <span className="text-destructive">*</span>
+                                <FieldLabel className="text-secondary" htmlFor={field.name}>
+                                    Correo electrónico <span className="text-destructive">*</span>
                                 </FieldLabel>
                                 <Input
                                     {...field}
@@ -136,11 +136,13 @@ const Contact = (props: Props) => {
                         name="company"
                         render={({ field }) => (
                             <Field>
-                                <FieldLabel htmlFor={field.name}>Company name</FieldLabel>
+                                <FieldLabel className="text-secondary" htmlFor={field.name}>
+                                    Nombre de la empresa
+                                </FieldLabel>
                                 <Input
                                     {...field}
                                     id={field.name}
-                                    placeholder="Optional"
+                                    placeholder="Opcional"
                                     className="bg-background"
                                 />
                             </Field>
@@ -152,11 +154,13 @@ const Contact = (props: Props) => {
                         name="employees"
                         render={({ field }) => (
                             <Field>
-                                <FieldLabel htmlFor={field.name}>Number of employees</FieldLabel>
+                                <FieldLabel className="text-secondary" htmlFor={field.name}>
+                                    Número de empleados
+                                </FieldLabel>
                                 <Input
                                     {...field}
                                     id={field.name}
-                                    placeholder="e.g. 10–50"
+                                    placeholder="p.ej. 10–50"
                                     className="bg-background"
                                 />
                             </Field>
@@ -168,14 +172,14 @@ const Contact = (props: Props) => {
                         name="message"
                         render={({ field, fieldState }) => (
                             <Field data-invalid={fieldState.invalid}>
-                                <FieldLabel htmlFor={field.name}>
-                                    Your message <span className="text-destructive">*</span>
+                                <FieldLabel className="text-secondary" htmlFor={field.name}>
+                                    Tu mensaje <span className="text-destructive">*</span>
                                 </FieldLabel>
                                 <Textarea
                                     {...field}
                                     id={field.name}
                                     aria-invalid={fieldState.invalid}
-                                    placeholder="Tell us what you are building…"
+                                    placeholder="Cuéntanos qué estás construyendo…"
                                     className="bg-background min-h-30 resize-none"
                                 />
                                 {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
@@ -194,7 +198,7 @@ const Contact = (props: Props) => {
                             {form.formState.isSubmitting ? (
                                 <LoaderIcon className="size-4 animate-spin" aria-hidden />
                             ) : null}
-                            {form.formState.isSubmitting ? 'Sending…' : 'Send message'}
+                            {form.formState.isSubmitting ? 'Enviando…' : 'Enviar mensaje'}
                         </Button>
                     </div>
                 </FieldGroup>
