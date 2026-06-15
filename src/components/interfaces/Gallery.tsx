@@ -191,6 +191,7 @@ const GalleryPaginationDot = ({
             style={{
                 width,
             }}
+            title={`Visual ${index + 1}`}
             onClick={() => handleClick(index)}
             className="bg-foreground/50 hover:bg-foreground/70 relative inline-block h-2 rounded-full">
             {isPlaying && currentVisualIndex === index && (
@@ -208,32 +209,32 @@ const visuals = [
     {
         text: 'Construcción de viviendas unifamiliares con enfoque en diseño y calidad.',
         className: 'bg-blue-100 dark:bg-blue-900',
-        image: 'https://picsum.photos/seed/construction1/1920/1080',
+        image: '/images/gallery/MATCON Fachada Vivienda Moderna.webp',
         textPosition: 'left',
     },
 
     {
         text: 'Remodelaciones interiores que transforman espacios en hogares funcionales y estéticamente agradables.',
         className: 'bg-green-100 dark:bg-green-900',
-        image: 'https://picsum.photos/seed/interior2/1920/1080',
-        textPosition: 'top',
+        image: '/images/gallery/MATCON Remodelacion Cocina Living.webp',
+        textPosition: 'left',
     },
     {
         text: 'Quinchos y terrazas diseñados para maximizar el disfrute de los espacios al aire libre con estilo y durabilidad.',
         className: 'bg-purple-100 dark:bg-purple-900',
-        image: 'https://picsum.photos/seed/terrace3/1920/1080',
-        textPosition: 'bottom',
+        image: '/images/gallery/MATCON Quincho Moderno Terminado.webp',
+        textPosition: 'right',
     },
     {
         text: 'Carpintería fina que combina artesanía tradicional con técnicas modernas para crear piezas únicas y funcionales.',
         className: 'bg-pink-100 dark:bg-pink-900',
-        image: 'https://picsum.photos/seed/woodwork4/1920/1080',
+        image: '/images/gallery/MATCON Ampliacion Segundo Piso.webp',
         textPosition: 'top',
     },
     {
         text: 'Terminaciones profesionales que garantizan la durabilidad y estética de cada proyecto.',
         className: 'bg-orange-100 dark:bg-orange-900',
-        image: 'https://picsum.photos/seed/finishing5/1920/1080',
+        image: '/images/gallery/MATCON Vista Aerea Parcelas La Serena.webp',
         textPosition: 'left',
     },
 ] as const satisfies readonly Visual[];
@@ -356,6 +357,7 @@ const Gallery = () => {
                                 </div>
 
                                 <button
+                                    title="Play"
                                     onClick={
                                         currentVisualIndex === visuals.length - 1 && !isPlaying
                                             ? restartAnimation

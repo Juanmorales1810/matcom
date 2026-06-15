@@ -16,7 +16,7 @@ const Testimonial = () => {
                     </p>
                     <div className="grid grid-cols-1 items-stretch gap-x-0 gap-y-4 lg:grid-cols-3 lg:gap-4">
                         <img
-                            src="https://picsum.photos/seed/testimonial1/800/600"
+                            src="/images/MATCOM Review.webp"
                             alt="Cliente satisfecho con proyecto de construcción"
                             className="h-72 w-full rounded-md object-cover lg:h-auto"
                         />

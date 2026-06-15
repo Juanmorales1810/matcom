@@ -23,7 +23,7 @@ const Feature = ({ className }: FeatureProps) => {
             <div className="relative z-10 container mx-auto flex flex-col items-center gap-10 md:gap-0">
                 <Button
                     variant="outline"
-                    className="text-muted-foreground flex items-center justify-center gap-5 rounded-full px-5! py-5 text-sm font-medium">
+                    className="flex items-center justify-center gap-5 rounded-full px-5! py-5 text-sm font-medium text-black">
                     <Group />
                     Built with Matcom
                     <ArrowUpRight />

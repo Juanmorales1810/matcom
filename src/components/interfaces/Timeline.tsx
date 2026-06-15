@@ -9,40 +9,40 @@ const sections = [
         subTitle: 'Contacto inicial',
         title: 'Contacto inicial y evaluación de necesidades',
         description: 'Recibimos tu solicitud por WhatsApp, teléfono o formulario web.',
-        image: 'https://picsum.photos/seed/contact1/800/600',
+        image: '/images/timeline/MATCON Terraza Premium La Serena.webp',
     },
     {
         subTitle: 'Evaluación del proyecto',
         title: 'Evaluación del proyecto y planificación',
         description:
             'Analizamos el tipo de trabajo, ubicación, medidas, materiales y necesidades específicas.',
-        image: 'https://picsum.photos/seed/eval2/800/600',
+        image: '/images/timeline/MATCON Vista Aerea Parcelas La Serena.webp',
     },
     {
         subTitle: 'Cotización',
         title: 'Cotización y propuesta personalizada',
         description: 'Preparamos una propuesta según el requerimiento del cliente.',
-        image: 'https://picsum.photos/seed/quote3/800/600',
+        image: '/images/timeline/MATCOM Cotizacion.webp',
     },
     {
         subTitle: 'Planificación',
         title: 'Planificación y ejecución del proyecto',
         description: 'Organizamos etapas, materiales y tiempos de ejecución.',
-        image: 'https://picsum.photos/seed/plan4/800/600',
+        image: '/images/timeline/MATCON Equipo en Terreno (1).webp',
     },
     {
         subTitle: 'Ejecución',
         title: 'Ejecución del proyecto',
         description:
             'Llevamos a cabo el proyecto según lo planificado, asegurando calidad y cumplimiento de plazos.',
-        image: 'https://picsum.photos/seed/execute5/800/600',
+        image: '/images/timeline/MATCON Ampliacion Segundo Piso.webp',
     },
     {
         subTitle: 'Entrega final',
         title: 'Entrega final del proyecto',
         description:
             'Realizamos la entrega final del proyecto, asegurando que todo esté conforme a lo planificado y cumpla con los estándares de calidad.',
-        image: 'https://picsum.photos/seed/deliver6/800/600',
+        image: '/images/timeline/MATCON Entrega Proyecto Familia.webp',
     },
 ];
 

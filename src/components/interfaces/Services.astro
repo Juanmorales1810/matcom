@@ -9,31 +9,31 @@ const services = [
         title: 'Construcción general',
         description:
             'Ofrecemos servicios de construcción para proyectos residenciales, comerciales e industriales, garantizando calidad y cumplimiento.',
-        image: 'https://picsum.photos/seed/construction1/600/400',
+        image: '/images/services/MATCOM Hero Principal Home (1).webp',
     },
     {
         title: 'Remodelaciones',
         description:
             'Realizamos remodelaciones integrales para transformar espacios existentes, adaptándolos a las necesidades y gustos de nuestros clientes.',
-        image: 'https://picsum.photos/seed/remodel2/600/400',
+        image: '/images/services/MATCON Remodelacion Cocina Living.webp',
     },
     {
         title: 'Carpintería fina',
         description:
             'Brindamos servicios de carpintería fina para crear muebles personalizados, puertas, ventanas y otros elementos de madera con acabados de alta calidad.',
-        image: 'https://picsum.photos/seed/woodwork3/600/400',
+        image: '/images/services/MATCON Maestro Terminaciones Finas.webp',
     },
     {
         title: 'Quinchos y espacios exteriores',
         description:
             'Diseñamos y construimos quinchos y espacios exteriores para disfrutar al máximo de su hogar, combinando funcionalidad y estética.',
-        image: 'https://picsum.photos/seed/outdoor4/600/400',
+        image: '/images/services/MATCON Quincho Moderno Terminado.webp',
     },
     {
         title: 'Venta de materiales de construcción',
         description:
             'Ofrecemos una amplia gama de materiales de construcción de alta calidad para satisfacer las necesidades de sus proyectos.',
-        image: 'https://picsum.photos/seed/construction1/600/400',
+        image: '/images/services/MATCON Terminaciones Constructivas Macro.webp',
     },
 ];
 ---
@@ -92,18 +92,18 @@ const services = [
             <div class="col-span-4 space-y-4">
                 {
                     services.map((service, index) => (
-                        <div class="bg-muted dark:bg-card flex items-center justify-between rounded-md border py-2 pr-6 pl-2">
+                        <div class="bg-muted dark:bg-card group flex items-center justify-between rounded-md border py-2 pr-6 pl-2">
                             <div class="flex items-center gap-5">
                                 <img
                                     src={service.image}
                                     alt={service.title}
-                                    class="h-20 w-32 rounded-sm border object-cover"
+                                    class="h-20 w-32 rounded-sm border object-cover transition-transform group-hover:-translate-x-32 group-hover:scale-300 group-hover:rotate-3 group-hover:shadow-xl group-hover:brightness-110"
                                 />
                                 <div class="flex flex-col">
                                     <h3 class="text-lg font-medium tracking-tight">
                                         {service.title}
                                     </h3>
-                                    <p class="text-muted-foreground tracking-tight">
+                                    <p class="tracking-tight text-black/80">
                                         {service.description}
                                     </p>
                                 </div>
