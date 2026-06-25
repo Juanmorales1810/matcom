@@ -38,11 +38,20 @@ const socialLinks = [
                             class="text-secondary text-lg font-semibold tracking-tight text-balance">
                             Oficina corporativa
                         </h2>
-                        <p class="text-muted-foreground mt-3 font-medium tracking-tight">
-                            La Serena / Coquimbo
-                            <br />
-                            Región de Coquimbo, Chile
-                        </p>
+                        <a
+                            href="https://www.google.com/maps/place/Matcon+Construcciones/@-29.9317935,-71.2881603,12z/data=!3m1!4b1!4m6!3m5!1s0x88e3d08f41ac0767:0xe5d43187e41eb0fd!8m2!3d-29.9317936!4d-71.2881602!16s%2Fg%2F11np_b8r07?hl=es&entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Abrir ubicación de Matcon Construcciones en Google Maps (se abre en una pestaña nueva)"
+                            class="text-muted-foreground hover:text-foreground group mt-3 inline-flex flex-col gap-1 font-medium tracking-tight">
+                            <span class="group-hover:underline">La Serena / Coquimbo</span>
+                            <span class="group-hover:underline">Región de Coquimbo, Chile</span>
+                            <span
+                                class="text-secondary group-hover:text-secondary/80 mt-1 inline-flex items-center gap-1 text-sm underline-offset-4 group-hover:underline">
+                                <MapPinIcon className="size-4 shrink-0" />
+                                Abrir en Google Maps
+                            </span>
+                        </a>
                     </div>
 
                     <div>
@@ -113,40 +122,6 @@ const socialLinks = [
                     <Contact client:load />
                 </div>
             </div>
-
-            <!-- <div class="mt-16">
-                <div class="flex flex-col gap-3">
-                    <h2
-                        class="text-secondary flex items-center gap-2 text-lg font-semibold tracking-tight text-balance">
-                        <MapPinIcon className="text-secondary size-5 shrink-0" />
-                        Ubicación
-                    </h2>
-                    <p class="text-muted-foreground font-medium tracking-tight">
-                        Matcon Construcciones — La Serena / Coquimbo, Región de Coquimbo, Chile.
-                    </p>
-                </div>
-                <div class="mt-5 overflow-hidden rounded-xl border">
-                    <iframe
-                        title="Ubicación de Matcon Construcciones en Google Maps"
-                        src="https://maps.google.com/maps?q=-29.9317936,-71.2881602&hl=es&z=15&output=embed"
-                        width="100%"
-                        height="380"
-                        style="border:0;"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="mt-4">
-                    <a
-                        href="https://www.google.com/maps/place/Matcon+Construcciones/@-29.9317935,-71.2881603,12z/data=!3m1!4b1!4m6!3m5!1s0x88e3d08f41ac0767:0xe5d43187e41eb0fd!8m2!3d-29.9317936!4d-71.2881602!16s%2Fg%2F11np_b8r07?hl=es&entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D"
-                        target="_blank"
-                        rel="noreferrer"
-                        class="text-secondary hover:text-secondary/80 inline-flex items-center gap-2 font-medium tracking-tight underline-offset-4 hover:underline">
-                        <MapPinIcon className="size-4 shrink-0" />
-                        Ver en Google Maps
-                    </a>
-                </div>
-            </div> -->
         </div>
     </div>
 </section>
