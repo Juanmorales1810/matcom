@@ -15,7 +15,7 @@ import Matcon from '../icons/matcon.astro';
     <div class="bp-grid absolute inset-0" aria-hidden="true"></div>
 
     <!-- Decoraciones técnicas del plano -->
-    <div class="pointer-events-none absolute inset-0 z-10" aria-hidden="true">
+    <div class="pointer-events-none absolute inset-0 z-10 hidden sm:block" aria-hidden="true">
         <!-- Marcas de esquina (crucetas de registro) -->
         <div class="crux crux-tl"></div>
         <div class="crux crux-tr"></div>
@@ -106,18 +106,20 @@ import Matcon from '../icons/matcon.astro';
 
     <!-- Contenido principal -->
     <div
-        class="relative z-20 flex min-h-dvh flex-col items-center justify-center gap-10 px-6 text-center">
+        class="relative z-20 flex min-h-dvh flex-col items-center justify-center gap-6 px-2 text-center sm:gap-10 sm:px-6">
         <!-- Etiqueta de clasificación -->
         <div class="clasif-badge">
             <span class="cb-line"></span>
-            <span class="text-sm text-white">◆ EMPRESA CONSTRUCTORA ◆</span>
+            <span class="hidden text-sm text-white sm:block">◆</span>
+            <span class="text-sm text-white">EMPRESA CONSTRUCTORA</span>
+            <span class="hidden text-sm text-white sm:block">◆</span>
             <span class="cb-line"></span>
         </div>
 
         <!-- Título isométrico principal -->
         <div class="iso-wrap">
-            <h1 class="iso-title sr-only pt-4 pb-8">MATCOM</h1>
-            <Matcon class="iso-title w-fill w-xs pt-4 pb-8 md:w-4xl" />
+            <span class="iso-title sr-only pt-4 pb-8">MATCOM</span>
+            <Matcon class="w-full max-w-4xl pt-4 pb-8" />
             <!-- Líneas de cota superior/inferior del título -->
             <div class="title-cota title-cota-top"></div>
             <div class="title-cota title-cota-bot"></div>
@@ -126,7 +128,9 @@ import Matcon from '../icons/matcon.astro';
         <!-- Regla decorativa con eslogan -->
         <div class="eslogan-row">
             <span class="esl-tick"></span>
-            <span class="esl-text text-sm text-white">CONSTRUYENDO EL FUTURO CON PRECISIÓN</span>
+            <span class="text-sm text-wrap text-white sm:text-nowrap"
+                >CONSTRUYENDO EL FUTURO CON PRECISIÓN</span
+            >
             <span class="esl-tick"></span>
         </div>
 
