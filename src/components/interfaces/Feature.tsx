@@ -49,12 +49,22 @@ const Feature = ({ className }: FeatureProps) => {
                     general, carpintería fina, quinchos, viviendas y venta de materiales.
                 </p>
                 <div className="flex flex-col gap-4 sm:mt-8 md:flex-row">
-                    <Button className="h-11 w-full rounded-xl sm:w-auto">
-                        Solicita tu cotización por WhatsApp
+                    <Button asChild className="h-11 w-full rounded-xl sm:w-auto">
+                        <a
+                            href="https://wa.me/56985492211?text=Hola%20Matcom,%20me%20gustaría%20solicitar%20una%20cotización."
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Solicita tu cotización por WhatsApp
+                        </a>
                     </Button>
-                    <Button variant="secondary" className="h-11 w-full rounded-xl sm:w-auto">
-                        Ver servicios de construcción
-                        <ArrowRight className="size-4" />
+                    <Button
+                        asChild
+                        variant="secondary"
+                        className="h-11 w-full rounded-xl sm:w-auto">
+                        <a href="#servicios">
+                            Ver servicios de construcción
+                            <ArrowRight className="size-4" />
+                        </a>
                     </Button>
                 </div>
             </div>
