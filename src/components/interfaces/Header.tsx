@@ -32,7 +32,7 @@ const Header = ({ className }: HeaderProps) => {
     }, []);
 
     const navLinks = [
-        { name: 'Inicio', href: '#' },
+        { name: 'Inicio', href: '#inicio' },
         { name: 'Servicios', href: '#servicios' },
         { name: 'Proyectos', href: '#proyectos' },
         { name: 'Nosotros', href: '#nosotros' },
@@ -46,8 +46,12 @@ const Header = ({ className }: HeaderProps) => {
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="flex h-16 items-center justify-between">
                             <div className="flex items-center gap-2">
-                                <img src="/logo-header.svg" className="max-h-8" alt="Matcom" />
-                                <span className="text-xl font-semibold tracking-tighter text-white md:text-3xl">
+                                <img
+                                    src="/logo-header.svg"
+                                    className="max-h-4 lg:max-h-6"
+                                    alt="Matcom"
+                                />
+                                <span className="text-lg font-semibold tracking-tighter text-white lg:text-2xl">
                                     Matcom
                                 </span>
                             </div>
@@ -56,7 +60,7 @@ const Header = ({ className }: HeaderProps) => {
                                     <a
                                         key={link.name}
                                         href={link.href}
-                                        className="group relative inline-block h-8 overflow-hidden text-xl font-medium text-white hover:text-white/80 md:text-3xl">
+                                        className="group relative inline-block h-8 overflow-hidden text-lg font-medium text-white hover:text-white/80 lg:text-2xl">
                                         <span className="block transition-transform duration-300 group-hover:-translate-y-full">
                                             {link.name}
                                         </span>
@@ -66,8 +70,8 @@ const Header = ({ className }: HeaderProps) => {
                                     </a>
                                 ))}
                             </div>
-                            <div className="hidden items-center space-x-2 text-xl text-white md:text-3xl lg:flex">
-                                <span className="font-medium">Santiago</span>
+                            <div className="hidden items-center space-x-2 text-lg text-white lg:flex lg:text-2xl">
+                                <span className="font-medium">La Serena</span>
                                 <span className="text-white/80">/</span>
 
                                 <span className="font-medium">
@@ -116,7 +120,7 @@ const Header = ({ className }: HeaderProps) => {
                                             </div>
                                             <div className="border-border border-t pt-6">
                                                 <div className="text-muted-foreground text-center text-sm">
-                                                    <div className="font-medium">Brisbane</div>
+                                                    <div className="font-medium">La Serena</div>
                                                     <div className="mt-1">
                                                         {currentTime ? currentTime : 'Loading'}
                                                     </div>
