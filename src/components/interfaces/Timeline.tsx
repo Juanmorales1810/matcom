@@ -85,7 +85,7 @@ const Timeline = ({ className }: TimelineProps) => {
     }, []);
 
     return (
-        <section className={cn('relative py-32', className)}>
+        <section id="cronograma" className={cn('relative py-32', className)}>
             <div
                 className="absolute inset-0 z-0"
                 style={{
@@ -160,9 +160,9 @@ const Timeline = ({ className }: TimelineProps) => {
                                 <p className="text-muted-foreground text-sm font-semibold md:text-base">
                                     {section.subTitle}
                                 </p>
-                                <h1 className="text-2xl font-semibold md:text-4xl">
+                                <h3 className="text-2xl font-semibold md:text-4xl">
                                     {section.title}
-                                </h1>
+                                </h3>
                                 <p className="text-muted-foreground">{section.description}</p>
                             </div>
                         ))}
