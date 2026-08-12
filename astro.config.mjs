@@ -9,10 +9,10 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://matcom.cl',
-  vite: {
-      plugins: [tailwindcss()],
+    site: 'https://www.matconservicios.com/',
+    vite: {
+        plugins: [tailwindcss()],
     },
 
-  integrations: [react(), sitemap()],
+    integrations: [react(), sitemap()],
 });
