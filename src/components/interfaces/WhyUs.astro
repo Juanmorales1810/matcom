@@ -1,5 +1,5 @@
 ---
-import { Button } from '../ui/button';
+import Button from '../starwind/button';
 import Illustration from '../ui/Illustration.astro';
 import { Asterisk, CornerDownRight } from 'lucide-react';
 
@@ -50,8 +50,9 @@ const process = [
                 </p>
 
                 <Button
+                    href={'#cronograma'}
                     variant="ghost"
-                    className="flex items-center justify-start gap-2 text-white">
+                    class="flex items-center justify-start gap-2 text-white">
                     <CornerDownRight className="text-secondary" />
                     Conoce más sobre nosotros
                 </Button>
