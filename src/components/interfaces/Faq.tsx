@@ -68,20 +68,22 @@ const Faq = () => {
                             </div>
                         </div>
                         <div className="py-4">
-                            <div className="group flex h-auto p-0 text-start text-base font-medium hover:bg-transparent sm:text-xl">
+                            <a
+                                href="https://wa.me/56985492211?text=Hola%20Matcom,%20me%20gustaría%20solicitar%20una%20cotización."
+                                className="group flex h-auto p-0 text-start text-base font-medium hover:bg-transparent sm:text-xl">
                                 <span className="border-border border-b-2 pb-0.5 transition-colors">
                                     Contáctanos
                                 </span>
                                 <ArrowUpRight className="ml-1 h-6 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                            </div>
+                            </a>
                         </div>
                     </div>
 
                     <div className="lg:col-span-3 xl:col-span-8">
                         <div className="mb-8 md:text-center lg:mb-16 lg:text-left">
-                            <h1 className="text-4xl leading-none font-medium tracking-tight sm:text-6xl">
+                            <h2 className="text-4xl leading-none font-medium tracking-tight sm:text-6xl">
                                 FAQ
-                            </h1>
+                            </h2>
                         </div>
                         <div className="max-w-none">
                             <Accordion
