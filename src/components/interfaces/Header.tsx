@@ -49,10 +49,10 @@ const Header = ({ className }: HeaderProps) => {
                                 <img
                                     src="/logo-header.svg"
                                     className="max-h-4 lg:max-h-6"
-                                    alt="Matcom"
+                                    alt="Matcon"
                                 />
                                 <span className="text-lg font-semibold tracking-tighter text-white lg:text-2xl">
-                                    Matcom
+                                    Matcon
                                 </span>
                             </div>
                             <div className="hidden items-center space-x-8 md:flex">
@@ -100,10 +100,10 @@ const Header = ({ className }: HeaderProps) => {
                                                     <img
                                                         src="/logo-header.svg"
                                                         className="max-h-12"
-                                                        alt="Matcom"
+                                                        alt="Matcon"
                                                     />
                                                     <span className="text-lg font-semibold tracking-tighter">
-                                                        Matcom
+                                                        Matcon
                                                     </span>
                                                 </a>
                                             </div>

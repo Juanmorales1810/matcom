@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 
 const items = [
     {
-        question: '¿MATCOM realiza construcción de viviendas completas?',
+        question: '¿MATCON realiza construcción de viviendas completas?',
         answer: 'Sí. Realizamos construcción general, ampliaciones y soluciones habitacionales según las necesidades del cliente.',
     },
     {
@@ -26,7 +26,7 @@ const items = [
         answer: 'Sí. Prestamos servicios en La Serena, Coquimbo y sectores cercanos de la Región de Coquimbo.',
     },
     {
-        question: '¿MATCOM realiza carpintería fina?',
+        question: '¿MATCON realiza carpintería fina?',
         answer: 'Sí. La carpintería fina y las terminaciones son uno de los principales diferenciales de la empresa.',
     },
 ];
@@ -69,7 +69,7 @@ const Faq = () => {
                         </div>
                         <div className="py-4">
                             <a
-                                href="https://wa.me/56985492211?text=Hola%20Matcom,%20me%20gustaría%20solicitar%20una%20cotización."
+                                href="https://wa.me/56985492211?text=Hola%20Matcon,%20me%20gustaría%20solicitar%20una%20cotización."
                                 className="group flex h-auto p-0 text-start text-base font-medium hover:bg-transparent sm:text-xl">
                                 <span className="border-border border-b-2 pb-0.5 transition-colors">
                                     Contáctanos

@@ -7,7 +7,7 @@ const Testimonial = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col gap-6">
                     <h2 className="text-3xl font-semibold tracking-tight uppercase md:text-4xl lg:text-5xl">
-                        Clientes que confían en MATCOM
+                        Clientes que confían en MATCON
                     </h2>
                     <p className="text-muted-foreground max-w-2xl text-lg font-medium">
                         La confianza se construye con trabajos bien hechos. Nuestro objetivo es que
@@ -16,7 +16,7 @@ const Testimonial = () => {
                     </p>
                     <div className="grid grid-cols-1 items-stretch gap-x-0 gap-y-4 lg:grid-cols-3 lg:gap-4">
                         <img
-                            src="/images/MATCOM Review.webp"
+                            src="/images/MATCON Review.webp"
                             alt="Cliente satisfecho con proyecto de construcción"
                             className="h-72 w-full rounded-md object-cover lg:h-auto"
                         />
@@ -39,7 +39,7 @@ const Testimonial = () => {
                         <Card>
                             <CardContent className="text-foreground/70 px-6 pt-6 leading-7">
                                 <q>
-                                    MATCOM nos ayudó a remodelar nuestro espacio con seriedad y
+                                    MATCON nos ayudó a remodelar nuestro espacio con seriedad y
                                     compromiso.
                                 </q>
                             </CardContent>

@@ -22,7 +22,7 @@ const sections = [
         subTitle: 'Cotización',
         title: 'Cotización y propuesta personalizada',
         description: 'Preparamos una propuesta según el requerimiento del cliente.',
-        image: '/images/timeline/MATCOM Cotizacion.webp',
+        image: '/images/timeline/MATCON Cotizacion.webp',
     },
     {
         subTitle: 'Planificación',

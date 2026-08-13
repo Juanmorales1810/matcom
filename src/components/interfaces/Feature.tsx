@@ -25,7 +25,7 @@ const Feature = ({ className }: FeatureProps) => {
                     variant="outline"
                     className="flex items-center justify-center gap-5 rounded-full px-5! py-5 text-sm font-medium text-black">
                     <Group />
-                    Built with Matcom
+                    Built with Matcon
                     <ArrowUpRight />
                 </Button>
                 <BracketedBorder>
@@ -41,7 +41,7 @@ const Feature = ({ className }: FeatureProps) => {
                     </h1>
                 </BracketedBorder>
                 <h2 className="text-foreground text-3xl font-medium tracking-tighter">
-                    Bienvenido a MATCOM{' '}
+                    Bienvenido a MATCON{' '}
                 </h2>
                 <p className="max-w-2xl px-10 text-center font-medium sm:mt-5 lg:text-xl">
                     Construimos, remodelamos y desarrollamos proyectos con calidad, confianza y
@@ -51,7 +51,7 @@ const Feature = ({ className }: FeatureProps) => {
                 <div className="flex flex-col gap-4 sm:mt-8 md:flex-row">
                     <Button asChild className="h-11 w-full rounded-xl sm:w-auto">
                         <a
-                            href="https://wa.me/56985492211?text=Hola%20Matcom,%20me%20gustaría%20solicitar%20una%20cotización."
+                            href="https://wa.me/56985492211?text=Hola%20Matcon,%20me%20gustaría%20solicitar%20una%20cotización."
                             target="_blank"
                             rel="noopener noreferrer">
                             Solicita tu cotización por WhatsApp

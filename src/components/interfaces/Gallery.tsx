@@ -310,7 +310,7 @@ const Gallery = () => {
                 <div className="flex flex-col gap-14">
                     <div className="">
                         <h3 className="text-secondary text-3xl font-semibold tracking-tight uppercase md:text-4xl lg:text-5xl">
-                            Trabajos realizados por MATCOM
+                            Trabajos realizados por MATCON
                         </h3>
                         <p className="text-muted-foreground max-w-2xl text-lg font-medium">
                             Aquí podrás conocer parte de nuestros proyectos, procesos constructivos
